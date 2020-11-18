@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>My Login Page</title>
+
+<script>
+//Create validate function for submit button
+function validate(){
+	//show alert if username or password are not filled
+	if(document.getElementById('username').value == ''){
+		alert('Username is compulsory.');
+		
+	}else if(document.getElementById('password').value == ''){
+		alert('Password is compulsory');
+	}else {
+		//submit the form
+		//document.forms[0].submit();
+		document.getElementById('loginForm').submit();
+	}
+}
+</script>
+
+</head>
+<body>
+ <center> 
+     <form action ='StudentInfo.jsp'method='POST' id = 'loginForm'>
+     <p>Username: <input type='text' name='username' id ='username'/></p>
+     <p>Password: <input type='password' name='password' id='password'/></p>
+     <p><button type = 'button' onclick = "validate()">Login</button>
+        <button type = 'reset'>Reset</button></p>
+     </form>
+     </center>
+</body>
+</html>
